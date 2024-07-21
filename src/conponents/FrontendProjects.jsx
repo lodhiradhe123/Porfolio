@@ -1,21 +1,29 @@
 import React from "react";
 import { MdDescription } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function FrontendProjects() {
   const FrontendData = [
+    {
+      img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/frontendProject3.png?updatedAt=1721566782903",
+      name: "Recipe App",
+      description:"The Recipe React Application is a user-friendly and interactive platform designed to help users discover, share, and manage their favorite recipes. Built with React, the application offers a seamless user experience with dynamic components and state management. Users can search for recipes, view detailed instructions, and save their favorites for easy access.",
+      skills:["React","Tailwind","css","Contex  API"],
+      live:"https://github.com/lodhiradhe123/Recipe-React-app.git",
+    },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/FrontendProjects.png?updatedAt=1721562077481",
       name: "Portfolio",
       description:"I've crafted my portfolio to exhibit diverse projects and skills, offering insight into my capabilities. Learn more about me through this platform, complete with links to my socials. Explore my journey and discover how I bring creativity and expertise to each.",
       skills:["React","Tailwind","css"],
-      live:"Live",
+      live:"https://github.com/lodhiradhe123/Porfolio.git",
     },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/FrontendProjects2.png?updatedAt=1721565905476",
-      name: "Portfolio",
+      name: "Work",
       description:"My project, developed using React, is a dynamic and interactive web application that leverages the power of React-Motion for smooth and engaging animations. This project showcases a modern UI with fluid transitions and animated components, enhancing the user experience.",
-      skills:["React","Tailwind","css"],
-      live:"Live",
+      skills:["React","Tailwind","css","react-motion"],
+      live:"https://github.com/lodhiradhe123/reactfirst.git",
     },
   ];
   return (
@@ -48,9 +56,11 @@ function FrontendProjects() {
                {img.description}
               </p>
               <div className="livebtn w-full flex justify-between">
+                <Link to={img.live}>
                 <button className="text-xl font-[foldit] border rounded px-3 py-[2px] mt-3">
-                 {img.live}
+                 Github
                 </button>
+                </Link>
                
               </div>
             </section>

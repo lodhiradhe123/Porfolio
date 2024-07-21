@@ -7,6 +7,7 @@ function AnimatedProjects() {
     "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation1.png?updatedAt=1721559417213",
     "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation5.png?updatedAt=1721559455533",
     "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation4.png?updatedAt=1721559474021",
+    "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animatedproject0.jpg?updatedAt=1721572175566",
   ];
   return (
     <div>
