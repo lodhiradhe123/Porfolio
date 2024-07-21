@@ -14,7 +14,7 @@ import { FaGitAlt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 function About() {
   return (
-    <div  className="hide-scrollbar min-h-screen bg-black text-white overflow-hidden ">
+    <div  className="hide-scrollbar min-h-screen bg-black text-white overflow-hidden font-[Kanit] ">
       <section className="max-sm:w-[90%] max-sm:m-3 w-1/2 ml-20 mt-32">
         <p className= "max-sm:text-sm max-sm:pt-10 para text-2xl font-semibold text-zinc-400">
           I'm <span className="max-sm:text-[16px] text-zinc-100">Radheshyam Lodhi</span>, comleted my b.tech (computer science) and

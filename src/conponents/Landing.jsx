@@ -3,7 +3,7 @@ import Socialsidebar from "./Socialsidebar";
 
 function Landing() {
   return (
-    <div className="  max-sm:w-full max-sm:items-start w-[100%]   text-white flex flex-col items-center justify-center font-[foldit] ">
+    <div className="  max-sm:w-full max-sm:items-start w-[100%]   text-white flex flex-col items-center justify-center font-[Kanit] ">
       <div className="max-sm:w-[79%] max-sm:p-2 w-2/3 h-full mt-32 ">
         <section className="">
         <h1 className="text-2xl font-semibold mb-5">Hi, My name is</h1>
