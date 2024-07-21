@@ -4,6 +4,7 @@ import Nav from "./conponents/Nav";
 import Routing from "./utils/Routing";
 import Socialsidebar from "./conponents/Socialsidebar";
 import "./App.css"
+import Pointer from "./conponents/Pointer";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
         <Nav />
         <Routing />
         <Socialsidebar />
+        <Pointer/>
       </div>
     </>
   );
