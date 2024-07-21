@@ -29,7 +29,7 @@ function FrontendProjects() {
   return (
     <div>
       {" "}
-      <h1 className="text-5xl pt-6 font-[foldit]">Frontend Projects</h1>
+      <h1 className="text-5xl pt-6 font-[Kanit]">Frontend Projects</h1>
       <section className=" h-[95%] bg-transparent flex overflow-auto p-5 gap-4 hide-scrollbar items-center">
         {FrontendData.map((img, i) => (
           <div className="max-sm:h-[100%] max-sm:w-full h-96 pages p-3 w-1/2  shrink-0 object-center object-center overflow-hidden flex flex-col justif-center items-center rounded-lg border border-zinc-600 ">
@@ -57,7 +57,7 @@ function FrontendProjects() {
               </p>
               <div className="livebtn w-full flex justify-between">
                 <Link to={img.live}>
-                <button className="text-xl font-[foldit] border rounded px-3 py-[2px] mt-3">
+                <button className="text-xl font-[Kanit] border rounded px-3 py-[2px] mt-3">
                  Github
                 </button>
                 </Link>

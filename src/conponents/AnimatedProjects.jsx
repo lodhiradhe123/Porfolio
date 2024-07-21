@@ -12,7 +12,7 @@ function AnimatedProjects() {
   return (
     <div>
       {" "}
-      <h1 className="text-5xl py-6 font-[foldit]">Animated Projects</h1>
+      <h1 className="text-5xl py-6 font-[Kanit]">Animated Projects</h1>
       <section className=" h-[85%] bg-transparent flex overflow-auto p-5 gap-4 hide-scrollbar items-center">
         {landingPageUrl.map((img, i) => (
           <div className="max-sm:h-[100%] max-sm:w-full h-96 pages p-3 w-1/2  shrink-0 object-center object-center overflow-hidden flex flex-col justif-center items-center rounded-lg border border-zinc-600 ">

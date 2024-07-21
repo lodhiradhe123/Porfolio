@@ -17,7 +17,7 @@ function LandingPages() {
   return (
     <div>
       {" "}
-      <h1 className="text-5xl py-6 font-[foldit]">Landing pages</h1>
+      <h1 className="text-5xl py-6 font-[Kanit]">Landing pages</h1>
       <section className=" h-96 bg-transparent flex overflow-auto p-5 gap-4 hide-scrollbar items-center">
         {landingPageUrl.map((img,i)=>(
             <div className="pages w-1/2 h-full shrink-0 object-center object-center overflow-hidden flex items-center rounded-lg ">
