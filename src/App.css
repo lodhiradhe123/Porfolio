@@ -1,5 +1,9 @@
 
-@import url("./assets/Foldit-Bold.ttf");
+/* @import url("./assets/Foldit-Bold.ttf"); */
+@font-face {
+    font-family: foldit;
+    src: url("./assets/Foldit-Bold.ttf");
+}
 *{
     margin: 0%;
     padding: 0%;
