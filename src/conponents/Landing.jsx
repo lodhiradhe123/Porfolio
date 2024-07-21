@@ -17,7 +17,6 @@ function Landing() {
           </p>
         </section>
       </div>
-      <Socialsidebar/>
 
     </div>
   );
