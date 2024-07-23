@@ -106,7 +106,8 @@ function BackendProjects() {
         "express",
         "mongodb",
       ],
-      live: "",
+      live: "https://github.com/lodhiradhe123/socialmedia-mern09.git",
+      github: "https://github.com/lodhiradhe123/socialmedia-mern09.git",
     },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend777.jpg?updatedAt=1721573408223",
@@ -121,6 +122,7 @@ function BackendProjects() {
         "mongodb",
       ],
       live: "",
+      github: "https://github.com/lodhiradhe123/Social-Media-0.2.git",
     },
   ];
   return (
@@ -147,9 +149,9 @@ function BackendProjects() {
               </div>
               <p className="leading-none font-semibold ">{img.description}</p>
               <div className="livebtn w-full flex justify-between">
-                <Link target="_blank" to={img.live}>
+                <Link target="_blank" to={img.github}>
                   <button className="text-xl font-[Kanit] border rounded px-3 py-[2px] mt-3">
-                    <h1>Live</h1>
+                    <h1>github</h1>
                   </button>
                 </Link>
               </div>
