@@ -3,13 +3,13 @@ import React from "react";
 function LandingPages() {
     const landingPageUrl = [
         "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingoage-10.png?updatedAt=1721557728623",
-        "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-9.png?updatedAt=1721556080960",
-        "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-3.png?updatedAt=1721556081239",
-        "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-5.png?updatedAt=1721556080690",
-        "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingoage-7.png?updatedAt=1721556080029",
-        "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-4.png?updatedAt=1721556078161",
+        // "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-9.png?updatedAt=1721556080960",
+        // "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-3.png?updatedAt=1721556081239",
+        // "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-5.png?updatedAt=1721556080690",
+        // "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingoage-7.png?updatedAt=1721556080029",
+        // "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-4.png?updatedAt=1721556078161",
         "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-1.png?updatedAt=1721556076333",
-        "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-2.png?updatedAt=1721556075965",
+        // "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-2.png?updatedAt=1721556075965",
         "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingPage-6.png?updatedAt=1721556075533",
         "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingpage-8.png?updatedAt=1721556074328",
         "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/landingoage-10.png?updatedAt=1721557728623"

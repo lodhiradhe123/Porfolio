@@ -2,11 +2,10 @@ import React from "react";
 
 function AnimatedProjects() {
   const landingPageUrl = [
-    "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation3.png?updatedAt=1721559488779",
     "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation2.png?updatedAt=1721559437638",
     "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation1.png?updatedAt=1721559417213",
-    "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation5.png?updatedAt=1721559455533",
-    "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation4.png?updatedAt=1721559474021",
+    // "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation5.png?updatedAt=1721559455533",
+    // "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animation4.png?updatedAt=1721559474021",
     "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/animatedproject0.jpg?updatedAt=1721572175566",
   ];
   return (

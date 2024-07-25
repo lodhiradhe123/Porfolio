@@ -5,14 +5,14 @@ import Routing from "./utils/Routing";
 import Socialsidebar from "./conponents/Socialsidebar";
 import "./App.css"
 import Pointer from "./conponents/Pointer";
+import Footer from "./conponents/Footer";
 function App() {
   return (
     <>
       <div className="w-full h-screen bg-black hide-scrollbar">
         <Nav />
         <Routing />
-        <Socialsidebar />
-        <Pointer/>
+        <Footer />
       </div>
     </>
   );
