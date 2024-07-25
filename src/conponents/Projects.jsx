@@ -6,8 +6,8 @@ import BackendProjects from "./BackendProjects";
 
 function Projects() {
   return (
-    <main className="bg-black min-screen">
-      <div className="max-w-screen-lg m-auto text-white font-[Kanit] ">
+    <main className="bg-pink-100 min-screen">
+      <div className="max-w-screen-lg m-auto  font-[Kanit] text-black">
         <BackendProjects />
         <FrontendProjects />
         <AnimatedProjects />

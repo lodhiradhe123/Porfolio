@@ -14,10 +14,10 @@ import { FaGitAlt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 function About() {
   return (
-    <div  className="hide-scrollbar min-h-screen bg-black text-white overflow-hidden font-[Kanit] ">
-      <section className="max-sm:w-[90%] max-sm:m-3 w-1/2 ml-20 mt-32">
-        <p className= "max-sm:text-sm max-sm:pt-10 para text-2xl font-semibold text-zinc-400">
-          I'm <span className="max-sm:text-[16px] text-zinc-100">Radheshyam Lodhi</span>, comleted my b.tech (computer science) and
+    <div  className="hide-scrollbar min-h-screen bg-pink-100 overflow-hidden font-[Kanit] ">
+      <section className="max-sm:w-[90%] max-sm:m-3 w-1/2 ml-20 mt-32 text-black">
+        <p className= "max-sm:text-sm max-sm:pt-10 para text-2xl font-semibold text-black">
+          I'm <span className="max-sm:text-[16px] text-zinc-900">Radheshyam Lodhi</span>, comleted my b.tech (computer science) and
           As a dedicated student of MERN Stack development, I am passionate about crafting visually compelling digital solutions. With strong problem-solving skills and a deep appreciation for both art and functionality, I create intricate code structures that provide seamless user experiences. Proficient in React.js, Node.js, Express, MongoDB, Passport.js, JWT, Multer, ImageKit, and Nodemailer, I am eager to leverage these technologies in innovative projects. Excited for new opportunities, I am ready to collaborate and contribute to impactful digital transformations.
         </p>
       </section>
