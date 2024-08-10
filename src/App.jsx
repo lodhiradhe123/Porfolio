@@ -9,6 +9,7 @@ import Footer from "./conponents/Footer";
 function App() {
   return (
     <>
+    <Pointer/>
       <div className="w-full h-screen bg-black hide-scrollbar">
         <Nav />
         <Routing />

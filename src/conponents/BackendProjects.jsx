@@ -147,7 +147,7 @@ function BackendProjects() {
                   </button>
                 ))}
               </div>
-              <p className="leading-none font-semibold ">{img.description}</p>
+              <p className="leading-none font-regular ">{img.description}</p>
               <div className="livebtn w-full flex justify-between">
                 <Link target="_blank" to={img.live}>
                   <button className="text-xl font-[Kanit] border rounded px-3 py-[2px] mt-3">
