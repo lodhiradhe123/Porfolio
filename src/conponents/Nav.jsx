@@ -37,7 +37,7 @@ function Nav() {
               "max-sm:p-2 text-center p-3 bg-zinc-300 rounded-lg text-sm text-black font-bold"
             }
             target="_blank"
-            href="https://ik.imagekit.io/vtd0qp9vb/PortfolioData/RADHESHYAM%20LODHI%20-RESUME.pdf?updatedAt=1721589812729"
+            href="https://ik.imagekit.io/vtd0qp9vb/PortfolioData/Radheshyam_Lodhi_Resume.pdf(1).pdf?updatedAt=1732460951621"
             download="resume.pdf"
           >
             Resume
