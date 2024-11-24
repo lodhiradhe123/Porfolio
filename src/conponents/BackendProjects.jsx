@@ -5,22 +5,22 @@ import { Link } from "react-router-dom";
 function BackendProjects() {
   const FrontendData = [
     {
-        img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend444.jpg?updatedAt=1721571602711",
-        name: "The Bag-Showroom",
-        description:
-          " I created an e-commerce website using Node.js, Express, Passport, Session, MongoDB Atlas, Nodemailer, and Razorpay for payment processing. Node.js and Express provide a powerful backend framework, ensuring efficient handling of routing and middleware. User authentication is managed using Passport, with sessions maintained for a seamless shopping experience.",
-        skills: [
-          "Node.js",
-          "Tailwind",
-          "ejs",
-          "Multer",
-          "Passport",
-          "nodemailer",
-          "express",
-          "mongodb",
-        ],
-        live: "https://the-bag-showroom.onrender.com/",
-      },
+      img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend444.jpg?updatedAt=1721571602711",
+      name: "The Bag-Showroom",
+      description:
+        " I created an e-commerce website using Node.js, Express, Passport, Session, MongoDB Atlas, Nodemailer, and Razorpay for payment processing. Node.js and Express provide a powerful backend framework, ensuring efficient handling of routing and middleware. User authentication is managed using Passport, with sessions maintained for a seamless shopping experience.",
+      skills: [
+        "Node.js",
+        "Tailwind",
+        "ejs",
+        "Multer",
+        "Passport",
+        "nodemailer",
+        "express",
+        "mongodb",
+      ],
+      live: "https://the-bag-showroom.onrender.com/",
+    },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend11.jpg?updatedAt=1721569869593",
       name: "Blog website",
@@ -55,7 +55,7 @@ function BackendProjects() {
       ],
       live: "https://new-web-hvef.onrender.com/",
     },
-    
+
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend333.jpg?updatedAt=1721571468495",
       name: "online task",
@@ -72,7 +72,7 @@ function BackendProjects() {
         "mongodb",
       ],
       live: "https://the-bag-showroom.onrender.com/",
-      github:"https://github.com/lodhiradhe123/new-web.git",
+      github: "https://github.com/lodhiradhe123/new-web.git",
     },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/Backend5.png?updatedAt=1721572448472",
@@ -112,15 +112,8 @@ function BackendProjects() {
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend777.jpg?updatedAt=1721573408223",
       name: "Book-Store",
-      description:
-        "Book store application ",
-      skills: [
-        "Node.js",
-        "Tailwind",
-        "ejs",
-        "express",
-        "mongodb",
-      ],
+      description: "Book store application ",
+      skills: ["Node.js", "Tailwind", "ejs", "express", "mongodb"],
       live: "",
       github: "https://github.com/lodhiradhe123/Social-Media-0.2.git",
     },
@@ -131,7 +124,10 @@ function BackendProjects() {
       <h1 className="text-5xl pt-6 font-[Kanit]">Backend Projects</h1>
       <section className=" h-[100%] bg-transparent flex overflow-auto p-5 gap-4 hide-scrollbar items-center">
         {FrontendData.map((img, i) => (
-          <div className="max-sm:h-[100%] max-sm:w-full h-96 pages p-3 w-1/2  shrink-0 object-center object-center overflow-hidden flex flex-col justif-center items-center rounded-lg border border-zinc-600 ">
+          <div
+            key={i}
+            className="max-sm:h-[100%] max-sm:w-full h-96 pages p-3 w-1/2  shrink-0 object-center object-center overflow-hidden flex flex-col justif-center items-center rounded-lg border border-zinc-600 "
+          >
             <section className="  rounded-lg overflow-hidden">
               <img
                 src={img.img}

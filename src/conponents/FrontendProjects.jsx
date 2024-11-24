@@ -18,7 +18,7 @@ function FrontendProjects() {
       description:
         "The Recipe React Application is a user-friendly and interactive platform designed to help users discover, share, and manage their favorite recipes. Built with React, the application offers a seamless user experience with dynamic components and state management. Users can search for recipes, view detailed instructions, and save their favorites for easy access.",
       skills: ["React", "Tailwind", "css", "Contex  API"],
-      live: "https://github.com/lodhiradhe123/Recipe-React-app.git",
+      live: "https://recipe-react-app-sigma.vercel.app/",
     },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/FrontendProjects.png?updatedAt=1721562077481",
@@ -34,7 +34,7 @@ function FrontendProjects() {
       description:
         "My project, developed using React, is a dynamic and interactive web application that leverages the power of React-Motion for smooth and engaging animations. This project showcases a modern UI with fluid transitions and animated components, enhancing the user experience.",
       skills: ["React", "Tailwind", "css", "react-motion"],
-      live: "https://github.com/lodhiradhe123/reactfirst.git",
+      live: "https://reactfirst-two-ochre.vercel.app/",
     },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/frontend055.jpg?updatedAt=1722413159134",
