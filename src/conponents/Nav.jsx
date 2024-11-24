@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 function Nav() {
   return (
     <>
-      <nav className="max-sm:w-full max-sm:px-5 max-w-screen-lg py-2 m-auto h-16 bg-transparent flex justify-between px-10 text-white  border-b border-zinc-500">
+      <nav className=" max-sm:w-full max-sm:px-5 max-w-screen-lg py-2 m-auto h-16 bg-transparent flex justify-between px-10 text-white  border-b border-zinc-500">
         <img
           src="https://ik.imagekit.io/vtd0qp9vb/PortfolioData/android-chrome-192x192.png?updatedAt=1721584888819"
           alt="image"

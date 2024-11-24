@@ -5,7 +5,7 @@ import Routing from "./utils/Routing";
 import Socialsidebar from "./conponents/Socialsidebar";
 import "./App.css"
 import Pointer from "./conponents/Pointer";
-import Footer from "./conponents/Footer";
+// import Footer from "./conponents/Footer";
 function App() {
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
       <div className="w-full h-screen bg-black hide-scrollbar">
         <Nav />
         <Routing />
-        <Footer />
+        <Socialsidebar />
       </div>
     </>
   );

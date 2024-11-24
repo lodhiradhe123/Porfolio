@@ -6,7 +6,7 @@ import Fullstack from "./Fullstack";
 
 function Projects() {
   return (
-    <main className="bg-pink-100 min-screen">
+    <main className="bg-pink-100 min-screen ">
       <div className="max-w-screen-lg m-auto  font-[Kanit] text-black">
         <Fullstack/>
         <BackendProjects />
