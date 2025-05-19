@@ -1,5 +1,6 @@
 import React from "react";
 import Socialsidebar from "./Socialsidebar";
+import VoiceAssistant from "./VoiceAssistant";
 
 function Landing() {
   return (
@@ -24,6 +25,7 @@ function Landing() {
           </p>
         </section>
       </div>
+      <VoiceAssistant />
     </div>
   );
 }

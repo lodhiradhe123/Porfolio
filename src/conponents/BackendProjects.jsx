@@ -1,14 +1,17 @@
-import React from "react";
-import { MdDescription } from "react-icons/md";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function BackendProjects() {
+  const scrollRef = useRef();
+  const [hovering, setHovering] = useState(false);
+
   const FrontendData = [
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend444.jpg?updatedAt=1721571602711",
       name: "The Bag-Showroom",
       description:
-        " I created an e-commerce website using Node.js, Express, Passport, Session, MongoDB Atlas, Nodemailer, and Razorpay for payment processing. Node.js and Express provide a powerful backend framework, ensuring efficient handling of routing and middleware. User authentication is managed using Passport, with sessions maintained for a seamless shopping experience.",
+        "I created an e-commerce website using Node.js, Express, Passport, Session, MongoDB Atlas, Nodemailer, and Razorpay for payment processing...",
       skills: [
         "Node.js",
         "Tailwind",
@@ -25,7 +28,7 @@ function BackendProjects() {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend11.jpg?updatedAt=1721569869593",
       name: "Blog website",
       description:
-        "This website allows users to create, read, update, and delete blog posts seamlessly. With MongoDB, we ensure efficient data storage and retrieval, while EJS provides a powerful templating engine for rendering HTML dynamically. Express serves as the robust framework that handles routing and middleware. To enhance user interaction, Nodemailer is integrated for sending automated email notifications.",
+        "This website allows users to create, read, update, and delete blog posts seamlessly. MongoDB ensures efficient data storage and retrieval...",
       skills: [
         "Node.js",
         "Tailwind",
@@ -40,9 +43,9 @@ function BackendProjects() {
     },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend222.jpg?updatedAt=1721570808449",
-      name: "new web",
+      name: "New Web",
       description:
-        " To enhance user experience, Nodemailer is integrated to handle email notifications for account verification and password resets. This project demonstrates a comprehensive full-stack application with essential user authentication and account management features, ensuring both functionality and security.",
+        "This project demonstrates a comprehensive full-stack application with essential user authentication and account management features...",
       skills: [
         "Node.js",
         "Tailwind",
@@ -55,12 +58,11 @@ function BackendProjects() {
       ],
       live: "https://new-web-hvef.onrender.com/",
     },
-
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend333.jpg?updatedAt=1721571468495",
-      name: "online task",
+      name: "Online Task",
       description:
-        " MongoDB Atlas ensures robust and scalable data storage. Nodemailer handles email notifications for order confirmations and account-related updates. For secure and efficient payment processing, Razorpay is integrated, enabling users to complete transactions effortlessly. This project showcases a full-featured e-commerce platform with robust security, seamless user experience, and reliable payment solutions.",
+        "This project showcases a full-featured e-commerce platform with robust security, seamless user experience, and reliable payment solutions...",
       skills: [
         "Node.js",
         "Tailwind",
@@ -76,9 +78,9 @@ function BackendProjects() {
     },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/Backend5.png?updatedAt=1721572448472",
-      name: "Social media",
+      name: "Social Media",
       description:
-        "I developed a social media platform using Node.js, Express, Passport, Session, MongoDB Atlas, and Nodemailer. This application allows users to create, delete, update, and like or dislike posts. Node.js and Express serve as the backend framework, efficiently handling routing and middleware. User authentication and session management are powered by Passport, ensuring secure and seamless access.",
+        "I developed a social media platform using Node.js, Express, Passport, Session, MongoDB Atlas, and Nodemailer...",
       skills: [
         "Node.js",
         "Tailwind",
@@ -93,9 +95,9 @@ function BackendProjects() {
     },
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend666.jpg?updatedAt=1721572918002",
-      name: "Social media",
+      name: "Social Media MERN",
       description:
-        "I developed a social media platform using Node.js, Express, Passport, Session, MongoDB Atlas, and Nodemailer. This application allows users to create, delete, update, and like or dislike posts. Node.js and Express serve as the backend framework, efficiently handling routing and middleware. .",
+        "This application allows users to create, delete, update, and like or dislike posts. Node.js and Express serve as the backend framework...",
       skills: [
         "Node.js",
         "Tailwind",
@@ -112,47 +114,86 @@ function BackendProjects() {
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/backend777.jpg?updatedAt=1721573408223",
       name: "Book-Store",
-      description: "Book store application ",
+      description: "Book store application",
       skills: ["Node.js", "Tailwind", "ejs", "express", "mongodb"],
       live: "",
       github: "https://github.com/lodhiradhe123/Social-Media-0.2.git",
     },
   ];
+
+  const duplicatedList = [...FrontendData, ...FrontendData];
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    let interval;
+    if (hovering) {
+      interval = setInterval(() => {
+        container.scrollLeft += 1;
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        }
+      }, 20);
+    }
+
+    return () => clearInterval(interval);
+  }, [hovering]);
+
   return (
     <div>
-      {" "}
       <h1 className="text-5xl pt-6 font-[Kanit]">Backend Projects</h1>
-      <section className=" h-[100%] bg-transparent flex overflow-auto p-5 gap-4 hide-scrollbar items-center">
-        {FrontendData.map((img, i) => (
-          <div
+      <section
+        ref={scrollRef}
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+        className="h-[100%] bg-transparent flex overflow-auto p-5 gap-4 hide-scrollbar items-center"
+      >
+        {duplicatedList.map((img, i) => (
+          <motion.div
             key={i}
-            className="max-sm:h-[100%] max-sm:w-full h-96 pages p-3 w-1/2  shrink-0 object-center object-center overflow-hidden flex flex-col justif-center items-center rounded-lg border border-zinc-600 "
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: (i % FrontendData.length) * 0.05 }}
+            className="max-sm:h-[100%] max-sm:w-full h-96 pages p-3 w-1/2 shrink-0 object-center object-center overflow-hidden flex flex-col justif-center items-center rounded-lg border border-zinc-600"
           >
-            <section className="  rounded-lg overflow-hidden">
+            <section className="rounded-lg overflow-hidden">
               <img
                 src={img.img}
-                alt=""
+                alt={img.name}
                 className="w-auto object-cover rounded-lg"
               />
             </section>
-            <section className="w-full  ">
-              <div className="btn max-sm:h-22 w-full h-22   flex flex-wrap gap-1 p-2 ">
-                {img.skills.map((skill) => (
-                  <button className="px-3 py-0  text-sm text-white font-bold bg-zinc-500 rounded-lg">
+            <section className="w-full">
+              <div className="btn max-sm:h-22 w-full h-22 flex flex-wrap gap-1 p-2">
+                {img.skills.map((skill, j) => (
+                  <button
+                    key={j}
+                    className="px-3 py-0 text-sm text-white font-bold bg-zinc-500 rounded-lg"
+                  >
                     {skill}
                   </button>
                 ))}
               </div>
-              <p className="leading-none font-regular ">{img.description}</p>
-              <div className="livebtn w-full flex justify-between">
-                <Link target="_blank" to={img.live}>
-                  <button className="text-xl font-[Kanit] border rounded px-3 py-[2px] mt-3">
-                    <h1>Live</h1>
-                  </button>
-                </Link>
+              <p className="leading-none font-regular">{img.description}</p>
+              <div className="livebtn w-full flex justify-between mt-2">
+                {img.live && (
+                  <Link target="_blank" to={img.live}>
+                    <button className="text-xl font-[Kanit] border rounded px-3 py-[2px] mt-3">
+                      Live
+                    </button>
+                  </Link>
+                )}
+                {img.github && (
+                  <Link target="_blank" to={img.github}>
+                    <button className="text-xl font-[Kanit] border rounded px-3 py-[2px] mt-3">
+                      Github
+                    </button>
+                  </Link>
+                )}
               </div>
             </section>
-          </div>
+          </motion.div>
         ))}
       </section>
     </div>

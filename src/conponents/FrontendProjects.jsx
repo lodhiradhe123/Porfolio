@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MdDescription } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function FrontendProjects() {
+  const scrollRef = useRef();
+  const [hovering, setHovering] = useState(false);
+
   const FrontendData = [
     {
       img: "https://ik.imagekit.io/vtd0qp9vb/PortfolioData/inventoryms.png?updatedAt=1723308729172",
@@ -45,13 +49,43 @@ function FrontendProjects() {
       live: "https://github.com/lodhiradhe123/reactfirst.git",
     },
   ];
+
+  const projectList = [...FrontendData, ...FrontendData]; // For infinite scroll
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    let interval;
+    if (hovering) {
+      interval = setInterval(() => {
+        container.scrollLeft += 1;
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        }
+      }, 20);
+    }
+
+    return () => clearInterval(interval);
+  }, [hovering]);
+
   return (
     <div>
-      {" "}
       <h1 className="text-5xl pt-6 font-[Kanit]">Frontend Projects</h1>
-      <section className=" h-[95%] bg-transparent flex overflow-auto p-5 gap-4 hide-scrollbar items-center">
-        {FrontendData.map((img, i) => (
-          <div key={i} className="max-sm:h-[100%] max-sm:w-full h-96 pages p-3 w-1/2  shrink-0 object-center object-center overflow-hidden flex flex-col justif-center items-center rounded-lg border border-zinc-600 ">
+      <section
+        ref={scrollRef}
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+        className=" h-[95%] bg-transparent flex overflow-auto p-5 gap-4 hide-scrollbar items-center"
+      >
+        {projectList.map((img, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: (i % FrontendData.length) * 0.05 }}
+            className="max-sm:h-[100%] max-sm:w-full h-96 pages p-3 w-1/2  shrink-0 object-center object-center overflow-hidden flex flex-col justif-center items-center rounded-lg border border-zinc-600 "
+          >
             <section className="  rounded-lg overflow-hidden">
               <img
                 src={img.img}
@@ -61,8 +95,11 @@ function FrontendProjects() {
             </section>
             <section className="w-full  ">
               <div className="btn max-sm:h-22 w-full h-22   flex flex-wrap gap-1 p-2 ">
-                {img.skills.map((skill,i) => (
-                  <button key={i} className="px-3 py-0  text-sm text-white font-bold bg-zinc-500 rounded-lg">
+                {img.skills.map((skill, i) => (
+                  <button
+                    key={i}
+                    className="px-3 py-0  text-sm text-white font-bold bg-zinc-500 rounded-lg"
+                  >
                     {skill}
                   </button>
                 ))}
@@ -76,7 +113,7 @@ function FrontendProjects() {
                 </Link>
               </div>
             </section>
-          </div>
+          </motion.div>
         ))}
       </section>
     </div>
